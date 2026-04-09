@@ -1,0 +1,14 @@
+services:
+  scraper:
+    build: .
+    volumes:
+      - ./output:/app/output
+    # Examples:
+    #   Scrape one video:
+    #     docker compose run scraper scrape "https://www.tiktok.com/@user/video/123"
+    #
+    #   Scrape multiple videos (from file):
+    #     docker compose run scraper scrape --from-file /app/output/urls.txt
+    #
+    #   Merge all scraped CSVs into one database:
+    #     docker compose run scraper merge
